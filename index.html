@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-		<link rel="shortcut icon" href="http://tonymoskal.com/favicon.ico">
+		<link rel="shortcut icon" href="assets/favicon.ico">
 		<title>Tony Moskal - Bio</title>
 		<script>window.sconePagesInfo={"collection":[{"label":"bio","pattern":"\/","title":"Tony Moskal - Bio","desc":null},{"label":"teaser","pattern":"\/teaser","title":"Tony Moskal - Teaser","desc":null},{"label":"videos","pattern":"\/videos(?:|\/(\\w+))","title":"Tony Moskal - Videos","desc":null},{"label":"credits","pattern":"\/credits","title":"Tony Moskal - Credits","desc":null},{"label":"!","pattern":null,"title":"Tony Moskal - Page Not Found (404)","desc":null}],"baseLink":"","requestLink":"\/","matchingPage":"bio"};</script>
 		<style scone-resource="style.css">
@@ -301,10 +301,10 @@
 				</div>
 				<main>
 					<nav class="navbar" scroll-follow="yes" data-tagalong="no" style="width: 1211px;">
-						<a scone-page="bio" href="" class="is-active">Bio</a>
-						<a scone-page="teaser" href="http://tonymoskal.com/teaser" class="">Teaser</a>
-						<a scone-page="videos" href="http://tonymoskal.com/videos" class="">Videos</a>
-						<a scone-page="credits" href="http://tonymoskal.com/credits" class="">Credits</a>
+						<a scone-page="bio" href="./" class="is-active">Bio</a>
+						<a scone-page="teaser" href="teaser" class="">Teaser</a>
+						<a scone-page="videos" href="videos" class="">Videos</a>
+						<a scone-page="credits" href="credits" class="">Credits</a>
 					</nav>
 					<div scone-page-payload="bio" style="display: block;">
 						<style scone-resource="pages/bio.css">
@@ -888,7 +888,167 @@ magna eget dapibus.</p>
 						scone.declare("Scone/Event.js",["Scone/util.js"],function(t){"use strict";function r(n){function o(t,r){return t&&o.hook(t,r),o.the}return t.copy(r.prototype,o),function(t){t.affairs=[],t.that(n)}(o),o}function n(t,r){var n=this;n.func=t,n.runs=void 0===r?1/0:r,n.count=0}return r.prototype.that=function(t){return void 0===t?this.the:(this.the=t,this)},r.prototype.hook=function(t,r){if(!t)throw new Error("event hook method requires func");return this.affairs.push(new n(t,r)),this},r.prototype.once=function(t){return this.hook(t,1)},r.prototype.unhook=function(){for(var t=[],r=0;r<arguments.length;r+=1)for(var n=arguments[r],o=0;o<this.affairs.length;o+=1){var e=this.affairs[o];e!==n&&e.func!==n&&t.push(e)}return this.affairs=t,this},r.prototype.trigger=function(){for(var t=[],r=0;r<this.affairs.length;r+=1){var n=this.affairs[r];t.push(n.invoke(this.the,arguments)),n.runs<1&&this.unhook(n)}return t},n.prototype.invoke=function(t,r){var n=this;return n.runs-=1,n.count+=1,n.func.apply(t,r)},r.Affair=n,r});
 					</script>
 					<script scone-resource="Scone/pages.js">
-						scone.declare("Scone/pages.js",["Scone/util.js","Scone/Event.js","Scone/Typo.js"],function(e,t,n){"use strict";function i(e){this.label=e,this.pattern=null,this.title=null,this.desc=null,this.payload=null,this.onShow=new t(this),this.onHide=new t(this),this.onShow(function(){this.show()}),this.onHide(function(){this.hide()})}var o=!!window.history.pushState;i.prototype.show=function(){},i.prototype.hide=function(){};var r=new e.Invocable,c={collection:{},requestLink:null,baseLink:null,match:null};return r.active=function(){return c.match},r.invoke=function(e){return void 0===e?c.collection:c.collection.hasOwnProperty(e)?c.collection[e]:null},r.onNavigate=new t(r),r.assess=function(e){e=n(e).str().or(new Error("link must be a string"));for(var t in c.collection){var i=c.collection[t];if("!"!==i.label){var o=new RegExp("^"+i.pattern.replace(/\//g,"/")+"$"),r=o.exec(e);if(r)return{match:i,regexResults:r}}}return{match:c.collection["!"],regexResults:[e]}},r.react=function(t){t=void 0!==t?n(t).str().or(new Error("link must be a string, or undefined for default fallback")):window.location.pathname.replace(e.regex(/^/,c.baseLink),"");var i=c.match,o=r.assess(t);return c.match=o.match,n.set(i)&&i.onHide.trigger(c.match,o.regexResults,i),c.match.onShow.trigger(c.match,o.regexResults,i),document.title=c.match.title?c.match.title:"",r.onNavigate.trigger(c.match,o.regexResults,i),c.match},r.push=function(e){return e=n(e).str().or(new Error("link must be a string")),e=e.replace(/(^\/|^\.\/)/,""),o&&window.history.pushState({},"",e),r.react("/"+e)},r.initSubscription=new e.Subscription,r.unfreeze=function(){var t=document.querySelectorAll('script[type="frozen"]');return e.loop(t,function(t,n){var i=n.innerHTML.replace("<script-escaped","<script").replace("</script-escaped","</script"),o=document.createElement("div");o.innerHTML=i,e.loop(o.querySelectorAll("script"),function(e,t){console.log(t);var n=document.createElement("script");n.src=t.src,n.type=t.type,n.innerHTML=t.innerHTML,document.head.insertBefore(n,document.head.firstChild),document.head.removeChild(n)}),n.outerHTML=o.innerHTML}),r},r.initiated=!1,r.init=function(){r.initiated=!0,r.unfreeze();var t="sconePagesInfo"in window?window.sconePagesInfo:null;if(!t)throw new Error("sconePagesInfo was not found");return c.requestLink=t.requestLink,c.baseLink=t.baseLink,e.loop(t.collection,function(e,t){var n=new i(t.label);"pattern"in t&&(n.pattern=t.pattern),"title"in t&&(n.title=t.title),"desc"in t&&(n.desc=t.desc),n.payload=document.querySelector('[scone-page-payload="'+n.label+'"]'),c.collection[n.label]=n}),document.body.addEventListener("click",function(e){var t="A"===e.target.tagName.toUpperCase(),n=e.target.hasAttribute("scone-page"),i=e.target.hasAttribute("href");return t&&n&&i?(e.preventDefault(),r.push(e.target.getAttribute("href")),!1):void 0}),e.loop(c.collection,function(e,t){t.show=function(){return this.payload?(this.payload.style.display="block",this):this},t.hide=function(){return this.payload?(this.payload.style.display="none",this):this},t.hide()}),o&&window.addEventListener("popstate",function(){r.react()}),r.initSubscription.deliver(r),r},r});
+
+
+scone.declare(
+  "Scone/pages.js",
+  ["Scone/util.js", "Scone/Event.js", "Scone/Typo.js"],
+  function(e, t, n) {
+    "use strict";
+    function i(e) {
+      (this.label = e),
+        (this.pattern = null),
+        (this.title = null),
+        (this.desc = null),
+        (this.payload = null),
+        (this.onShow = new t(this)),
+        (this.onHide = new t(this)),
+        this.onShow(function() {
+          this.show();
+        }),
+        this.onHide(function() {
+          this.hide();
+        });
+    }
+    var o = !!window.history.pushState;
+    (i.prototype.show = function() {}), (i.prototype.hide = function() {});
+    var r = new e.Invocable(),
+      c = { collection: {}, requestLink: null, baseLink: null, match: null };
+    return (
+      (r.active = function() {
+        return c.match;
+      }),
+      (r.invoke = function(e) {
+        return void 0 === e
+          ? c.collection
+          : c.collection.hasOwnProperty(e)
+            ? c.collection[e]
+            : null;
+      }),
+      (r.onNavigate = new t(r)),
+      (r.assess = function(e) {
+        e = n(e)
+          .str()
+          .or(new Error("link must be a string"));
+        for (var t in c.collection) {
+          var i = c.collection[t];
+          if ("!" !== i.label) {
+            var o = new RegExp("^" + i.pattern.replace(/\//g, "/") + "$"),
+              r = o.exec(e);
+            if (r) return { match: i, regexResults: r };
+          }
+        }
+        return { match: c.collection["!"], regexResults: [e] };
+      }),
+      (r.react = function(t) {
+        t =
+          void 0 !== t
+            ? n(t)
+                .str()
+                .or(
+                  new Error(
+                    "link must be a string, or undefined for default fallback"
+                  )
+                )
+            : window.location.pathname.replace(e.regex(/^/, c.baseLink), "");
+        var i = c.match,
+          o = r.assess(t);
+        return (
+          (c.match = o.match),
+          n.set(i) && i.onHide.trigger(c.match, o.regexResults, i),
+          c.match.onShow.trigger(c.match, o.regexResults, i),
+          (document.title = c.match.title ? c.match.title : ""),
+          r.onNavigate.trigger(c.match, o.regexResults, i),
+          c.match
+        );
+      }),
+      (r.push = function(e) {
+        return (
+          (e = n(e)
+            .str()
+            .or(new Error("link must be a string"))),
+          (e = e.replace(/(^\/|^\.\/)/, "")),
+          // o && window.history.pushState({}, "", e),
+          r.react("/" + e)
+        );
+      }),
+      (r.initSubscription = new e.Subscription()),
+      (r.unfreeze = function() {
+        var t = document.querySelectorAll('script[type="frozen"]');
+        return (
+          e.loop(t, function(t, n) {
+            var i = n.innerHTML
+                .replace("<script-escaped", "<script")
+                .replace("</script-escaped", "</script"),
+              o = document.createElement("div");
+            (o.innerHTML = i),
+              e.loop(o.querySelectorAll("script"), function(e, t) {
+                console.log(t);
+                var n = document.createElement("script");
+                (n.src = t.src),
+                  (n.type = t.type),
+                  (n.innerHTML = t.innerHTML),
+                  document.head.insertBefore(n, document.head.firstChild),
+                  document.head.removeChild(n);
+              }),
+              (n.outerHTML = o.innerHTML);
+          }),
+          r
+        );
+      }),
+      (r.initiated = !1),
+      (r.init = function() {
+        (r.initiated = !0), r.unfreeze();
+        var t = "sconePagesInfo" in window ? window.sconePagesInfo : null;
+        if (!t) throw new Error("sconePagesInfo was not found");
+        return (
+          (c.requestLink = t.requestLink),
+          (c.baseLink = t.baseLink),
+          e.loop(t.collection, function(e, t) {
+            var n = new i(t.label);
+            "pattern" in t && (n.pattern = t.pattern),
+              "title" in t && (n.title = t.title),
+              "desc" in t && (n.desc = t.desc),
+              (n.payload = document.querySelector(
+                '[scone-page-payload="' + n.label + '"]'
+              )),
+              (c.collection[n.label] = n);
+          }),
+          document.body.addEventListener("click", function(e) {
+            var t = "A" === e.target.tagName.toUpperCase(),
+              n = e.target.hasAttribute("scone-page"),
+              i = e.target.hasAttribute("href");
+            return t && n && i
+              ? (e.preventDefault(), r.push(e.target.getAttribute("href")), !1)
+              : void 0;
+          }),
+          e.loop(c.collection, function(e, t) {
+            (t.show = function() {
+              return this.payload
+                ? ((this.payload.style.display = "block"), this)
+                : this;
+            }),
+              (t.hide = function() {
+                return this.payload
+                  ? ((this.payload.style.display = "none"), this)
+                  : this;
+              }),
+              t.hide();
+          }),
+          o &&
+            window.addEventListener("popstate", function() {
+              r.react();
+            }),
+          r.initSubscription.deliver(r),
+          r
+        );
+      }),
+      r
+    );
+  }
+);
+
+
 					</script>
 					<script> scone.load("Scone/pages.js", function (pages) { pages.init(); }); </script>
 					<hr class="stub">
@@ -902,7 +1062,7 @@ magna eget dapibus.</p>
 						<!--<li>Phone: <a data-fill-phone>~error~</a></li>-->
 					</div>
 					<div>
-						<strong>© 2014 Tony Moskal</strong>
+						<strong>© 2018 Tony Moskal</strong>
 						<li>Victoria, Beautiful British Columbia</li>
 						<!--<li><a class="webdev" href="http://chasemoskal.com/" target="_blank">Web development by Chase</a></li>-->
 					</div>
