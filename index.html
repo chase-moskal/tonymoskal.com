@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+		<link rel="shortcut icon" href="http://tonymoskal.com/favicon.ico">
+		<title>Tony Moskal - Bio</title>
+		<script>window.sconePagesInfo={"collection":[{"label":"bio","pattern":"\/","title":"Tony Moskal - Bio","desc":null},{"label":"teaser","pattern":"\/teaser","title":"Tony Moskal - Teaser","desc":null},{"label":"videos","pattern":"\/videos(?:|\/(\\w+))","title":"Tony Moskal - Videos","desc":null},{"label":"credits","pattern":"\/credits","title":"Tony Moskal - Credits","desc":null},{"label":"!","pattern":null,"title":"Tony Moskal - Page Not Found (404)","desc":null}],"baseLink":"","requestLink":"\/","matchingPage":"bio"};</script>
+		<style scone-resource="style.css">
+			@import "//fonts.googleapis.com/css?family=Roboto:300,100";
+			@import "//fonts.googleapis.com/css?family=Roboto+Condensed";
+			* {
+				margin: 0;
+				padding: 0; }
+			
+			*::selection {
+				background: rgba(194, 255, 0, 0.5);
+				text-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.3); }
+			
+			[tabindex] {
+				outline: 0; }
+			
+			html, body {
+				height: 100%;
+				font-size: 16px;
+				font-family: sans-serif;
+				background: #134042;
+				color: white; }
+				@media (min-width: 1200px) {
+					html, body {
+						font-size: 18px; } }
+			
+			.baseplate {
+				width: 90%;
+				min-height: 100%;
+				margin: auto;
+				background: #10383a;
+				border-right: 1px solid #0d2d2e; }
+				@media (min-width: 1200px) {
+					.baseplate {
+						width: 75%; } }
+				@media (max-width: 600px) {
+					.baseplate {
+						width: 100%;
+						border: 0; } }
+			
+			.sheet {
+				position: relative;
+				z-index: 1; }
+				.sheet .bg {
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: url("assets/abstract-beta.jpg");
+					background-size: cover;
+					background-position: center center; }
+				.sheet .bg-screen {
+					width: 100%;
+					height: 100%;
+					background-color: rgba(8, 26, 27, 0.86); }
+				.sheet main {
+					position: relative;
+					z-index: 2; }
+			
+			.plate {
+				font-size: 1em;
+				padding: 2em 4em;
+				padding-bottom: 4em; }
+			
+			.video-player {
+				display: none; }
+				.video-player.is-active {
+					display: block; }
+				.video-player .blankee {
+					position: fixed;
+					z-index: 10;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: rgba(0, 0, 0, 0.9); }
+				.video-player .videobox {
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0; }
+					.video-player .videobox iframe {
+						max-width: 90%;
+						max-height: auto;
+						display: block;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						margin: 0 auto; }
+			
+			.title {
+				font-size: 1em;
+				padding-top: 1em;
+				text-align: center;
+				cursor: default;
+				background: #298c92; }
+			
+			.title-main {
+				text-transform: uppercase;
+				display: block;
+				font-size: 3.8em;
+				margin-bottom: 0.2em;
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				border: 6px solid white;
+				border-left: 0;
+				border-right: 0;
+				text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.2); }
+				@media (max-width: 600px) {
+					.title-main {
+						font-size: 2em; } }
+				@media (min-width: 1200px) {
+					.title-main {
+						font-size: 4.4em; } }
+				.title-main b {
+					color: #fbaf5d; }
+			
+			.title-sub {
+				text-transform: lowercase;
+				display: block;
+				font-size: 1.2em;
+				font-family: "Roboto", Arial, sans-serif;
+				font-weight: 300;
+				font-style: normal;
+				letter-spacing: 0.1em;
+				background: #fbaf5d;
+				color: #298c92; }
+				@media (max-width: 800px) {
+					.title-sub {
+						font-size: 0.8em; } }
+				.title-sub span {
+					padding: 0 0.5em; }
+			
+			.feature {
+				position: relative;
+				min-height: 200px;
+				text-align: center;
+				background: url("assets/abstract-alpha.jpg");
+				background-size: cover;
+				background-position: center center; }
+				@media (max-width: 600px) {
+					.feature {
+						min-height: 150px; } }
+				.feature::after {
+					position: absolute;
+					z-index: 2;
+					bottom: 0; }
+				.feature .tagline {
+					display: block;
+					font-size: 2em;
+					padding: 1em;
+					padding-bottom: 2em;
+					text-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.3); }
+			
+			.feature::before, .feature::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2em;
+				background: rgba(251, 175, 93, 0.5); }
+			
+			.navbar {
+				text-transform: lowercase;
+				font-family: "Roboto", Arial, sans-serif;
+				font-weight: 100;
+				font-style: normal;
+				font-size: 2em;
+				text-align: center;
+				cursor: default;
+				background: rgba(0, 0, 0, 0.25);
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+				position: absolute;
+				z-index: 5;
+				width: 100%;
+				top: 0;
+				transition: background 400ms ease; }
+				.navbar[data-tagalong="yes"] {
+					position: fixed;
+					background: rgba(0, 0, 0, 0.86); }
+				.navbar a {
+					padding: 0 0.4em;
+					color: white;
+					color: rgba(255, 255, 255, 0.9);
+					text-decoration: none; }
+					.navbar a:hover, .navbar a:focus {
+						color: white;
+						text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+						text-decoration: underline; }
+					.navbar a:active {
+						color: #fd572e; }
+					.navbar a.is-active {
+						color: #fbaf5d;
+						text-decoration: underline;
+						text-shadow: none; }
+			
+			.stub {
+				display: block;
+				border: none;
+				min-height: 2em;
+				text-align: center;
+				font-family: "Consolas", "Courier New", Courier, monospace;
+				color: rgba(0, 0, 0, 0.35);
+				background: rgba(255, 115, 21, 0.69); }
+			
+			.footer {
+				opacity: 0.9;
+				width: 75%;
+				margin: 0 auto;
+				padding: 0.8em 1.6em;
+				padding-bottom: 8em;
+				text-transform: lowercase;
+				cursor: default; }
+			
+			.webdev {
+				display: block;
+				margin-top: 1em;
+				opacity: 0.2; }
+			
+			.ftable {
+				display: table;
+				width: 100%;
+				font-size: 1em;
+				font-family: "Roboto", Arial, sans-serif;
+				font-weight: 100;
+				font-style: normal;
+				color: #94c5c8; }
+				.ftable > div {
+					display: table-cell;
+					width: 50%;
+					text-align: left; }
+					.ftable > div:last-child {
+						text-align: right; }
+				@media (max-width: 600px) {
+					.ftable {
+						display: block; }
+						.ftable > div {
+							display: block;
+							width: 100%;
+							margin-bottom: 2em; } }
+				.ftable h1, .ftable h2, .ftable h3, .ftable h4, .ftable strong {
+					font-family: "Roboto", Arial, sans-serif;
+					font-weight: 300;
+					font-style: normal;
+					font-size: 1.2em; }
+				.ftable li {
+					list-style: none;
+					padding: 0 0.1em; }
+				.ftable a {
+					font-family: "Roboto", Arial, sans-serif;
+					font-weight: 300;
+					font-style: normal;
+					color: #d7eaeb;
+					text-decoration: none; }
+					.ftable a:hover, .ftable a:focus {
+						color: white;
+						text-decoration: underline; }
+					.ftable a:active {
+						color: #94c5c8; }
+			
+		</style>
+	</head>
+	<body>
+		<div class="video-player">
+			<div class="blankee"></div>
+			<div class="videobox"></div>
+		</div>
+		<div class="baseplate">
+			<header class="header">
+				<h1 class="title">
+					<strong class="title-main">
+						<b>Tony</b>Moskal
+					</strong>
+					<em class="title-sub">
+						<span>Editor</span>
+						<span>Sound Designer</span>
+						<span>Motion Graphic Designer</span>
+					</em>
+				</h1>
+				<div class="feature">
+					<strong class="tagline"></strong>
+				</div>
+			</header>
+			<div class="sheet" tabindex="0">
+				<div class="bg">
+					<div class="bg-screen"></div>
+				</div>
+				<main>
+					<nav class="navbar" scroll-follow="yes" data-tagalong="no" style="width: 1211px;">
+						<a scone-page="bio" href="" class="is-active">Bio</a>
+						<a scone-page="teaser" href="http://tonymoskal.com/teaser" class="">Teaser</a>
+						<a scone-page="videos" href="http://tonymoskal.com/videos" class="">Videos</a>
+						<a scone-page="credits" href="http://tonymoskal.com/credits" class="">Credits</a>
+					</nav>
+					<div scone-page-payload="bio" style="display: block;">
+						<style scone-resource="pages/bio.css">
+							@import "//fonts.googleapis.com/css?family=Roboto:300,100";
+							@import "//fonts.googleapis.com/css?family=Roboto+Condensed";
+							[data-page="bio"] .plate {
+								font-family: "Roboto", Arial, sans-serif;
+								font-weight: 300;
+								font-style: normal;
+								text-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.5);
+								color: white; }
+								[data-page="bio"] .plate h1 {
+									font-size: 1.3em; }
+								[data-page="bio"] .plate h2 {
+									font-size: 1.2em; }
+								[data-page="bio"] .plate h3 {
+									font-size: 1.1em; }
+								[data-page="bio"] .plate h1, [data-page="bio"] .plate h2, [data-page="bio"] .plate h3 {
+									margin: 1em auto; }
+								[data-page="bio"] .plate hr, [data-page="bio"] .plate p {
+									margin: 0.5em auto; }
+							
+							[data-page="bio"] .plate {
+								padding: 6em 10%;
+								margin: auto;
+								color: #DBE5F3;
+								-webkit-transition: background-color 1s ease;
+								-moz-transition: background-color 1s ease;
+								transition: background-color 1s ease;
+								cursor: default; }
+								@media (min-width: 1200px) {
+									[data-page="bio"] .plate {
+										padding-left: 20%;
+										padding-right: 20%; } }
+								[data-page="bio"] .plate .portrait {
+									float: left;
+									margin-right: 1em;
+									margin-bottom: 0.5em;
+									max-width: 480px;
+									width: 25%;
+									display: block;
+									border-radius: 3px;
+									box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.3); }
+									@media (max-width: 600px) {
+										[data-page="bio"] .plate .portrait {
+											width: 50%; } }
+								[data-page="bio"] .plate hr {
+									border: none;
+									width: 100%;
+									height: 0.2em;
+									background: rgba(189, 208, 255, 0.2);
+									margin-top: 1em;
+									margin-bottom: 0.5em; }
+							
+						</style>
+						<div scone-resource="pages/bio.html">
+							<!--& pages/bio.css -->
+							<section data-page="bio">
+								<div class="plate">
+							
+									<!--
+									<h1>I'm an experienced sound engineer with expertise in video editing and motion graphics.</h1>
+									<hr/>
+									<img class="portrait" src="photos/tony.jpg" alt=""/>
+									<p>I began my career as a musician in my teens, and grew to become a highly experienced Protools sound designer and accredited video editor. Over a decade of producing original  music for television helped develop me into an adept music editor. Sound effects play an important role in my sound design, and my knowledge of producing Dolby 5.1 surround sound mixes helps me to create immersive soundtracks.</p>
+									<p style="clear:both;">I have a keen eye for visual design, and create 3D title sequences and motion graphics that compliment the story. I love to work on documentaries, and pretty much any media that utilizes sound and visuals.</p>
+									<p><strong>I've produced both video and audio for documentaries airing on Discovery, National Geographic International, CBC, CTV, W Network, Vision, CHUM, APTN, OLN, BRAVO, Knowledge Network, Global TV, TVO and History Channel.</strong></p>
+							
+									<h2>Underwater Television</h2>
+									<hr/>
+									<p>It's no coincidence that I'm so involved with underwater television productions: I've been passionate about the ocean and an avid scuba diver since I was twelve years old and have explored some of the most exotic diving locations in the world.</p>
+									<p>I've been working with Sport Diver TV for nearly two decades. I began as the sound editor and mixer for all 39 episodes of the series Undersea Explorer, and later earned the additional roles of video editor, and motion graphics designer for the 13 episode series: The Blue Realm  (I assisted with location audio, and DIT for four of the later episodes).</p>
+							
+									<h2>Documentaries and Children’s Television</h2>
+									<hr/>
+									<p>I’ve been fortunate to work on a range of television productions from children’s series such as <em>Take Off!</em> and <em>Tiga Talk!</em>, to docs covering social issues like <em>Free The Slaves</em>, and <em>Checklist: A Measure of Evil</em>. I have worked closely with the terrific people at May Street Productions for over two decades and have been involved with their programmes in various roles: sound designer, editor, graphics artist, and online finisher.</p>
+									<p>My career has been fascinating, and I have thoroughly enjoyed the opportunity of working with so many talented people.</p>
+									-->
+							
+									<hr>
+									<img class="portrait" src="assets/tony.jpg" alt="">
+							
+									<p>Tony Moskal is a digital media designer and works in 
+documentary television and video productions fulfilling the roles of 
+sound designer, video editor, colorist and motion graphics artist. He 
+has also worked on location as sound recordist, DIT and cameraman.</p>
+							
+									<p>He began his career as a musician and sound engineer, was 
+nominated for Best Engineer in the Westcoast Canadian Academy of 
+Recording Arts and Sciences, and grew to become an experienced Sound 
+Designer and accredited Video Editor.</p>
+							
+									<p>Over a decade of producing original music for television 
+helped develop his skills as music editor. Sound effects play an 
+important role in his sound design, and with the ability to produce 
+Dolby 5.1 surround sound mixes he creates immersive soundtracks.</p>
+							
+									<hr>
+							
+									<p>Various software packages are used to produce his work: 
+Protools, Adobe CC: Premiere Pro, After Effects, Photoshop, Final Cut 
+Pro 7 and X, Cinema 4D.</p>
+							
+									<p>Tony has produced both video and audio for documentaries 
+airing on Discovery, National Geographic International,  APTN, CBC, CTV,
+W Network, Vision, CHUM, OLN, BRAVO, Knowledge Network, Global TV, TVO 
+and History Channel. He has also produced soundtracks for film, featured
+at The Sundance and Cannes Film Festivals, released by Sony Pictures 
+Classics and Alliance Atlantis.</p>
+							
+									<h1>Other Interests</h1>
+									<p>Tony has a deep love for the ocean, and has been an avid 
+scuba diver since he was twelve years old, so it's no coincidence that 
+he's been so involved in producing underwater television. Tony also 
+enjoys biking, paintball and gaming on the Playstation 4.</p>
+							
+								</div>
+							</section>
+						</div>
+					
+					</div>
+					
+						<div scone-page-payload="teaser" style="display: none;">
+							<style scone-resource="pages/teaser.css">
+								@import "//fonts.googleapis.com/css?family=Roboto:300,100";
+								@import "//fonts.googleapis.com/css?family=Roboto+Condensed";
+								[data-page="teaser"] {
+									padding: 6em 0;
+									background: rgba(0, 0, 0, 0.6); }
+									[data-page="teaser"] iframe {
+										width: 100%; }
+								
+							</style>
+							<div scone-resource="pages/teaser.html">
+								<!--& pages/teaser.css -->
+								<section data-page="teaser">
+									<iframe src="//player.vimeo.com/video/111951700" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" height="500" frameborder="0" width="890"></iframe>
+								</section>
+							</div>
+					
+						</div>
+					
+					
+						<div scone-page-payload="videos" style="display: none;">
+							<style scone-resource="pages/videos.css">
+								@import "//fonts.googleapis.com/css?family=Roboto:300,100";
+								@import "//fonts.googleapis.com/css?family=Roboto+Condensed";
+								.video-list li {
+									font-family: "Roboto", Arial, sans-serif;
+									font-weight: 300;
+									font-style: normal; }
+									.video-list li h1 {
+										font-family: "Roboto", Arial, sans-serif;
+										font-weight: 300;
+										font-style: normal;
+										font-size: 1.6em;
+										margin-bottom: 0.5em;
+										border-radius: 2px;
+										text-transform: uppercase;
+										text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); }
+								
+								[data-page="videos"] .intro {
+									text-align: center;
+									padding: 25% 10%; }
+									[data-page="videos"] .intro a {
+										color: dodgerBlue; }
+										[data-page="videos"] .intro a:hover, [data-page="videos"] .intro a:focus {
+											color: #0071e0; }
+										[data-page="videos"] .intro a:active {
+											color: #0052a3; }
+								
+								.video-list {
+									list-style: none;
+									border-bottom: 0; }
+									.video-list li {
+										position: relative;
+										background-size: cover;
+										background-position: center center;
+										cursor: default; }
+										.video-list li > div {
+											position: relative;
+											z-index: 2;
+											padding-top: 5%;
+											padding-left: 5%;
+											padding-right: 60%;
+											padding-bottom: 10%;
+											background: rgba(16, 36, 37, 0.7);
+											background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent 6%), linear-gradient(100deg, rgba(16, 36, 37, 0.9) 35%, transparent 80%); }
+											@media (max-width: 600px) {
+												.video-list li > div {
+													padding-right: 5%;
+													padding-top: 15%;
+													padding-bottom: 15%; } }
+										.video-list li:first-child > div {
+											padding-top: 6em; }
+										.video-list li h1, .video-list li p, .video-list li .info {
+											padding: 0.1em 0.2em; }
+										.video-list li a.play-button {
+											opacity: 0.6;
+											position: absolute;
+											top: 0;
+											right: 0;
+											bottom: 35%;
+											left: 50%;
+											display: block;
+											margin: auto;
+											width: 8em;
+											height: 4em;
+											cursor: pointer;
+											border-radius: 5px;
+											border: none;
+											outline: none;
+											color: transparent;
+											-moz-user-select: none;
+											-webkit-user-select: none;
+											user-select: none;
+											background: rgba(91, 217, 255, 0.8);
+											transition: all 200ms ease; }
+											.video-list li a.play-button::before {
+												content: "";
+												display: block;
+												position: absolute;
+												top: 0;
+												left: 50%;
+												margin-left: -1em;
+												width: 0px;
+												height: 0px;
+												border: 2em solid transparent;
+												border-left-color: rgba(255, 255, 255, 0.8);
+												transform: scaleY(0.5);
+												transition: border-left-color 200ms ease; }
+											.video-list li a.play-button::after {
+												opacity: 0;
+												content: attr(data-tip);
+												position: absolute;
+												top: 100%;
+												left: 10%;
+												right: 10%;
+												font-size: 0.6em;
+												text-align: center;
+												color: white;
+												text-transform: uppercase;
+												transition: opacity 200ms ease; }
+											.video-list li a.play-button:hover {
+												opacity: 1;
+												background: rgba(0, 196, 255, 0.8); }
+												.video-list li a.play-button:hover::before {
+													border-left-color: rgba(255, 255, 255, 0.96); }
+												.video-list li a.play-button:hover::after {
+													opacity: 0.8; }
+											.video-list li a.play-button:active {
+												opacity: 0.8; }
+											@media (max-width: 600px) {
+												.video-list li a.play-button {
+													position: relative;
+													top: auto;
+													right: auto;
+													bottom: auto;
+													left: auto;
+													margin: auto;
+													margin-bottom: 0.4em; }
+													.video-list li a.play-button::after {
+														content: ""; } }
+										.video-list li h1 {
+											background: rgba(0, 0, 0, 0.5);
+											background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.16)); }
+										.video-list li p {
+											opacity: 0.82; }
+										.video-list li .info {
+											opacity: 0.4;
+											font-size: 0.8em;
+											text-align: left; }
+								
+							</style>
+							<div scone-resource="pages/videos.html">
+								<!--& pages/videos.css -->
+								<section data-page="videos">
+									
+								<ol class="video-list"><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500780812_960x540.jpg?r=pad&quot;);"><div><h1>Toxic Invaders</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/113954770" target="tony-moskal-video">Play on Vimeo</a><p>Segment
+from the Toxic Invaders episode of The Blue Realm series which aired on
+Discovery. Tony was responsible for location sound, video edit, sound 
+design, graphics, and video finish.
+
+For more information about The Blue Realm, visit bluerealmhd.com</p><p class="info">2 mins</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500118935_960x540.jpg?r=pad&quot;);"><div><h1>Miracle Venom</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/111949381" target="tony-moskal-video">Play on Vimeo</a><p>Sample
+from the Miracle Venom episode of The Blue Realm series. Tony was 
+responsible for the video edit, sound design, motion graphics, and video
+finish. Aired on Discovery.
+
+For more information about The Blue Realm, visit bluerealmhd.com</p><p class="info">1 min</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500781631_960x540.jpg?r=pad&quot;);"><div><h1>Reefs of Steel</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/111949383" target="tony-moskal-video">Play on Vimeo</a><p>A
+small piece from Reefs of Steel, an episode of The Blue Realm Series 
+which aired on Discovery. Tony was responsible for the video edit, sound
+design, graphics, and video finish.
+
+For more information about The Blue Realm, visit bluerealmhd.com</p><p class="info">2 mins</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/496750989_960x540.jpg?r=pad&quot;);"><div><h1>How It Goes</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/111949380" target="tony-moskal-video">Play on Vimeo</a><p>Music
+video for the song 'How It Goes', which was written, performed, and 
+produced by Karly Summers. Tony was the cameraman, editor, and sound 
+mixer for this video.</p><p class="info">4 mins</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500118774_960x540.jpg?r=pad&quot;);"><div><h1>Shark Nation Intro</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/113954769" target="tony-moskal-video">Play on Vimeo</a><p>Clip
+from the Shark Nation episode of the Blue Realm Series which aired on 
+Discovery. Tony was responsible for location sound, video edit, sound 
+design, graphics, and video finish.
+
+For more information about The Blue Realm, visit bluerealmhd.com</p><p class="info">2 mins</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500781303_960x540.jpg?r=pad&quot;);"><div><h1>Duncan Garage Showroom</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/112733092" target="tony-moskal-video">Play on Vimeo</a><p>Segment
+about the Duncan Garage Showroom and it's eccentric owner "Longevity 
+John". Tony ran second camera and was the video editor, music mixer, and
+sound mixer for this video.</p><p class="info">1 min</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/500780573_960x540.jpg?r=pad&quot;);"><div><h1>Shipsinkers</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/113962854" target="tony-moskal-video">Play on Vimeo</a><p>Clip
+from Shipsinkers, a show produced for National Geographic 
+International. I was responsible for the video edit and sound design.</p><p class="info">1 min</p></div></li><li style="background-image: url(&quot;https://i.vimeocdn.com/video/495475577_960x540.jpg?r=pad&quot;);"><div><h1>Tony Moskal Graphics Reel</h1><a class="play-button" data-tip="Play on Vimeo" href="https://vimeo.com/111013778" target="tony-moskal-video">Play on Vimeo</a><p>Tony Moskal is a video editor and sound designer, and also produces motion graphics.
+This video features some of his graphics design.</p><p class="info">1 min</p></div></li></ol></section>
+							</div>
+					
+						</div>
+					
+					
+						<div scone-page-payload="credits" style="display: none;">
+							<style scone-resource="pages/credits.css">
+								@import "//fonts.googleapis.com/css?family=Roboto:300,100";
+								@import "//fonts.googleapis.com/css?family=Roboto+Condensed";
+								.credtable {
+									font-size: 0.8em;
+									font-family: "Roboto", Arial, sans-serif;
+									font-weight: 300;
+									font-style: normal; }
+									.credtable h1 {
+										font-family: Arial, sans-serif;
+										font-size: 1.4em;
+										text-transform: uppercase; }
+									.credtable h2, .credtable h3 {
+										font-size: 1.1em; }
+									.credtable p {
+										opacity: 0.8; }
+								
+								[data-page="credits"] {
+									padding: 6em 10%;
+									background: rgba(13, 26, 31, 0.6); }
+								
+								.credtable {
+									display: table; }
+									.credtable ul {
+										display: table-cell;
+										width: 50%; }
+										.credtable ul:first-child {
+											padding-right: 5%; }
+										.credtable ul li {
+											margin: 0.5em auto; }
+									@media (max-width: 600px) {
+										.credtable {
+											display: block; }
+											.credtable ul {
+												display: block;
+												width: 100%;
+												padding: 4%; } }
+								
+							</style>
+							<div scone-resource="pages/credits.html">
+								<!--& pages/credits.css -->
+								<section data-page="credits">
+									<div class="credtable">
+										<ul>
+											<h1>Video and Audio Design</h1>
+								
+											<li>
+												<h2>The Blue Realm</h2>
+												<p>A 13 part one hour documentary series airing on Discovery
+Channel Canada, Discovery HD Theatre (USA) and National Geographic 
+International. Tony is responsible for both offline and online edit, 
+graphics and sound design, as well as location sound and DIT for four of
+the latest episodes</p>
+											</li>
+								
+											<li>
+												<h2>Taking Back The Years</h2>
+												<p>6 half hours for Vision TV. Online, graphics and sound design</p>
+											</li>
+												
+											<li>
+												<h2>Mr.Right Is Stuck In Traffic</h2>
+												<p>A one hour doc for WNetwork and Halogen. Edit, graphics and sound design</p>
+											</li>
+								
+											<li>
+												<h2>Sea of Steel</h2>
+												<p>A one hour doc for National Geographic International and OLN Canada. Edit, graphics and sound design</p>
+											</li>
+								
+											<li>
+												<h2>Gone Wild</h2>
+												<p>A one hour doc for Animal Planet Canada. Online Finishing, Graphics and Sound Design</p>
+											</li>
+								
+											<li>
+												<h2>Checklist: A Measure of Evil</h2>
+												<p>A one hour doc for CTV. Online Finishing, Graphics and Sound Design</p>
+											</li>
+								
+											<li>
+												<h2>The Lacandon Maya</h2>
+												<p>A one hour doc for History Channel. Online Finishing, Graphics and Sound Design</p>
+											</li>
+								
+											<li>
+												<h2>Killer Whale, and Crocodile</h2>
+												<p>Bravo! Canada. Online finishing and sound design</p>
+											</li>
+								
+											<li>
+												<h2>Singing Home The Bones: A Poet Becomes Himself</h2>
+												<p>A one hour doc for Bravo! APTN &amp; SCN. Online finishing, graphics and sound design</p>
+											</li>
+								
+											<li>
+												<h2>Good To Go: Pitch To Premiere</h2>
+												<p>CTV/Globemedia - 13 half hours. Opening Graphics and soundmix</p>
+											</li>
+								
+											<li>
+												<h2>The Fires That Burn</h2>
+												<p>A one hour doc for Vision TV. Online finishing, graphics and sound design</p>
+											</li>
+								
+											<li>
+												<h2>To Free the Slaves</h2>
+												<p>A 90 minute doc airing on CBC Rough Cuts. Online finishing, graphics and sound design</p>
+											</li>
+										</ul>
+										<ul>
+											<h1>Sound Design/Soundmix</h1>
+								
+											<li>
+												<h2>In the Company of Men</h2>
+												<p>Feature film for Sony Pictures Classics, worldwide theatrical release</p>
+											</li>
+											
+											<li>
+												<h2>Croon</h2>
+												<p>CHUM mow</p>
+											</li>
+								
+											<li>
+												<h2>American Reel</h2>
+												<p>Feature film for KiMina Entertainment and Mark Archer Entertainment</p>
+											</li>
+											
+											<li>
+												<h2>Moosemeat and Marmalade</h2>
+												<p>13 half hours for APTN</p>
+											</li>
+											
+											<li>
+												<h2>TigaTalk!</h2>
+												<p>43 half hours for APTN</p>
+											</li>
+											
+											<li>
+												<h2>The Naughty Bits</h2>
+												<p>13 half hours for W Network</p>
+											</li>
+											
+											<li>
+												<h2>Good To Go</h2>
+												<p>13 half hours for Bravo!</p>
+											</li>
+											
+											<li>
+												<h2>Undersea Explorer</h2>
+												<p>39 half hours for OLN, Knowledge Network, TVO</p>
+											</li>
+											
+											<li>
+												<h2>Hijacked Future</h2>
+												<p>Featured on Global TV’s series : ‘Global Currents’</p>
+											</li>
+											
+											<li>
+												<h2>The Little Forest</h2>
+												<p>A cell animated short by Gilbert Taggert for DRS Television Rumantscha</p>
+											</li>
+											
+											<li>
+												<h2>Survival of the Fittest : Stories From The West Coast Trail</h2>
+												<p>CTVGlobemedia, A Channels</p>
+											</li>
+											
+											<li>
+												<h2>Sounds Like Motown</h2>
+												<p>Bravo! Canada</p>
+											</li>
+											
+											<li>
+												<h2>Living Things We Love to Hate</h2>
+												<p>Discovery Channel Canada</p>
+											</li>
+											
+											<li>
+												<h2>Vacations from the Heart</h2>
+												<p>Global TV</p>
+											</li>
+											
+											<li>
+												<h2>Rain Wolves</h2>
+												<p>Discovery Channel Canada</p>
+											</li>
+											
+											<li>
+												<h2>Ils Trais Vent</h2>
+												<p>A cell animated short by Gilbert Taggert for DRS Television Rumantscha</p>
+											</li>
+											
+											<li>
+												<h2>The Monarch: A Butterfly Beyond Borders</h2>
+												<p>Discovery Channel Canada</p>
+											</li>
+											
+											<li>
+												<h2>The Story of the Coast Salish Knitters</h2>
+												<p>National Film Board, received a LEO AWARD nomination for excellence in Overall Sound Documentary</p>
+											</li>
+											
+											<li>
+												<h2>The Art of Peacekeeping</h2>
+												<p>Bravo! Canada</p>
+											</li>
+											
+											<li>
+												<h2>The Ways We Live: Exploring Community</h2>
+												<p>10 half hours for Vision</p>
+											</li>
+											
+											<li>
+												<h2>Good Wood</h2>
+												<p>CBC's <em>Nature of Things</em> with David Suzuki</p>
+											</li>
+											
+											<li>
+												<h2>Safari Ocean Adventure</h2>
+												<p>13 part underwater series, aired on NHK Japan and Discovery Channel Canada</p>
+											</li>
+											
+											<li>
+												<h2>Take Off and Take Off Again</h2>
+												<p>26 half hours for Family Channel and CTV</p>
+											</li>
+										</ul>
+									</div>
+								</section>
+								
+							</div>
+					
+						</div>
+					
+					
+						<div scone-page-payload="!" style="display: none;">
+							<div scone-resource="pages/404.html">
+								
+								<section page="404">
+									<h2>Page Not Found (404)</h2>
+									<p>Donec tincidunt commodo nunc. Nullam sodales dui sed orci 
+lobortis interdum sit amet maximus risus. Curabitur dapibus, arcu ut 
+porttitor pulvinar, leo metus fermentum libero, non pellentesque purus 
+mauris non nibh. Etiam et sapien quis nibh consectetur finibus. 
+Vestibulum semper enim quis magna sollicitudin, sit amet iaculis odio 
+congue. Nam malesuada sit amet justo ac fringilla. Integer ornare tempor
+magna eget dapibus.</p>
+								</section>
+								
+							</div>
+					
+						</div>
+					
+					<script> window.sconeInfo = {"version":"horizon","debug":false,"shortcuts":[]}; </script>
+					<script scone-resource="Scone/scone.js">
+						window.scone=function(){function e(t){return t.replace(e.r,"\\$&")}function t(){function t(){return t.invoke.apply(t,arguments)}t.invoke=function(){};var n=window.sconeInfo||{version:"",debug:!1,shortcuts:[]};return t.version=function(){return n.version},t.debug=function(){return n.debug},t.shortcuts=function(e){return void 0===e?void 0!==n.shortcuts?n.shortcuts:{}:(n.shortcuts=e,t)},t.shortcut=function(e,r){return n.shortcuts[e]=r,t},t.applyShortcuts=function(t){for(var r in n.shortcuts){var s=new RegExp("^"+e(r));if(s.test(t))return t.replace(s,n.shortcuts[r])}return t},t.link=function(){return arguments.length<1?"":(arguments[0]=t.applyShortcuts(arguments[0]),Array.prototype.join.call(arguments,"/"))},t}return e.r=/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,new t}(),function(e){function t(n){this.label=n,this.link=e.link(n);var r=t.interpretLink(this.link);this.base=r.base,this.extension=r.extension,this.type=r.type,this.payload=void 0,this.status=0,this.subscribers=[]}function n(e){var n;return e in r?n=r[e]:(n=new t(e),r[e]=n),n}var r={},s=[];e.resourceListing=function o(){return o},t.prototype.subscribe=function(e){return void 0!==this.payload?e(this.payload):this.subscribers.push(e),this},t.prototype.resolve=function(){var t=this;if(t.status=1,"document"==t.type){var n=document.querySelector('[scone-resource="'+t.label+'"]');if(n)return t.commit(n);e.debug()&&console.log("Scone resource hotload: "+t.label+" ("+t.link+") ["+t.type+"]");var r=new XMLHttpRequest;r.responseType="text",r.onload=function(){var e=document.createElement("div");e.setAttribute("scone-resource",t.label),e.innerHTML=this.responseText,t.commit(e)},r.open("get",t.link,!0),r.send()}else if("stylesheet"==t.type){var n=document.querySelector('[scone-resource="'+t.label+'"]');if(n)return t.commit(n);e.debug()&&console.log("Scone resource hotload: "+t.label+" ("+t.link+") ["+t.type+"]");var s=document.createElement("link");s.rel="stylesheet",s.href=t.link,document.head.appendChild(s),t.commit(s)}else if("script"==t.type){e.debug()&&console.log("Scone resource hotload: "+t.label+" ("+t.link+") ["+t.type+"]");var o=document.createElement("script");o.async=!0,o.src=t.link,document.head.appendChild(o)}else"image"==t.type;return t},t.prototype.commit=function(e){this.payload=e,this.status=2,s.push(this.label);for(var t=0;t<this.subscribers.length;t+=1)this.subscribers[t](e);return this.subscribers=[],this},t.interpretLink=function(e){var t,n=/^(.*)\.(.*)$/.exec(e),r=n?n[1]:e,s=n?n[2]:"";if(/^.+\/$/.test(e))t="dir";else if(""==s||"html"==s||"htm"==s||"txt"==s)t="document";else if("js"==s)t="script";else if("css"==s)t="stylesheet";else{if("jpg"!=s&&"jpeg"!=s&&"png"!=s&&"gif"!=s)throw new Error("Unknown extension ("+s+")");t="image"}return{base:r,extension:s,type:t}},e.load=function(){for(var t=[],s=null,o=0;o<arguments.length;o+=1){var i=arguments[o];if(i.constructor==String)t.push(i);else if(i.constructor==Array)for(var u=0;u<i.length;u+=1){if(i[u].constructor!=String)throw new Error("scone.load became very confused at your input");t.push(i[u])}else{if(i.constructor!=Function)throw new Error("scone.load became confused at your input");s=i}}for(var c=t.length,o=0;o<t.length;o+=1){var a=t[o],l=n(a);l.subscribe(function(){if(c-=1,1>c){for(var n=[],o=0;o<t.length;o+=1)n.push(r[t[o]].payload);s.apply(e,n)}}),0==l.status&&l.resolve()}},e.declare=function(){if(2==arguments.length)return n(arguments[0]).commit(arguments[1].call(e)),this;if(3==arguments.length){var t=n(arguments[0]),r=arguments[1],s=arguments[2];void 0!==r&&null!==r&&r.constructor==Array&&r.length>0?e.load(r,function(){t.commit(s.apply(e,arguments))}):t.commit(s.call(e))}return this}}(window.scone);
+					</script>
+					<script scone-resource="Scone/Typo.js">
+						scone.declare("Scone/Typo.js",function(){"use strict";function n(t,r){return this instanceof n?(this.x=t,void(this.pass=r===!0?!0:!1)):new n(t,r)}function t(n,t,r){return r=void 0===t?r:!r,r&&(n.pass=!0),n}var r={};r.nul=function(n){return null===n},r.undef=function(n){return void 0===n},r.def=function(n){return void 0!==n},r.set=function(n){return r.def(n)&&!r.nul(n)},r.truthy=function(n){return!!n},r.falsey=function(n){return!n},r.bool=function(n){return r.set(n)&&n.constructor===Boolean},r.num=function(n){return r.set(n)&&n.constructor===Number},r.integer=function(n){return r.num(n)&&n%1===0},r.str=function(n){return r.set(n)&&n.constructor===String},r.obj=function(n){return r.set(n)&&(n instanceof Object||"object"==typeof n)},r.plob=function(n){return r.set(n)&&n.constructor===Object},r.func=function(n){return r.set(n)&&n.constructor===Function},r.arr=function(n){return r.set(n)&&n.constructor===Array},r.arrlike=function(n){return r.set(n)&&r.num(n.length)};var o={};o.is=function(n,t){return n===t},o.gt=function(n,t){return n>t},o.lt=function(n,t){return t>n},o.gte=function(n,t){return n>=t},o.lte=function(n,t){return t>=n},o.has=function(n,t){return t in n},o.contains=function(n,t){return-1!==n.indexOf(t)},o.test=function(n,t){if(!r.func(t))throw new Error("Custom Typo tests must be functions");return t(n)};for(var u in r)(function(){var o=r[u];n[u]=o,n.prototype[u]=function(n){return t(this,n,o(this.x))}})();for(var u in o)(function(){var r=o[u];n[u]=r,n.prototype[u]=function(n,o){return t(this,o,r(this.x,n))}})();return n.prototype.or=n.prototype.end=function(n){if(this.pass)return this.x;if(void 0===n)throw new Error("Typo: Chain failed");if(n instanceof Error)throw n;return n},n});
+					</script>
+					<script scone-resource="Scone/util.js">
+						scone.declare("Scone/util.js",["Scone/Typo.js"],function(r){"use strict";var e={};return e.loop=function(e,n){if(r.arrlike(e))for(var o=0;o<e.length&&n.call(e,o,e[o])!==!1;o+=1);else{if(!r.obj(e))throw new Error("loop only takes objects or arrays");for(var t in e)if(n.call(e,t,e[t])===!1)break}},e.flatten=function(r){for(var e=[],n=0;n<r.length;n+=1){var o=r[n];if(o&&o.constructor==Array)for(var t=0;t<o.length;t+=1)e.push(o[t]);else e.push(o)}return e},e.copy=function(n,o,t){n=r(n).obj().or(new Error("copy source must be an object")),o=r(o).obj().or(new Error("copy target must be an object")),t=r(t).arr().or([]);var u=Object.getOwnPropertyNames(n);return e.loop(u,function(e,u){t.length&&r.contains(t,u)||(o[u]=n[u])}),o},e.regexQuote=function(r){return r.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,"\\$&")},e.regex=function(){for(var r="",n=!1,o=!1,t=!1,u=!1,c=0;c<arguments.length;c+=1){var i=arguments[c];i instanceof RegExp?(r+=i.source,n=n||i.global,o=o||i.ignoreCase,t=t||i.multiLine,u=u||i.sticky):void 0!==i&&null!==i&&i.constructor==String&&(r+=e.regexQuote(i))}var s=""+(n?"g":"")+(o?"i":"")+(t?"m":"")+(u?"y":"");return new RegExp(r,s)},e.lzp=function(r,e){r+="",e-=r.length;for(var n="";n.length<e;)n+="0";return n+r},e.Invocable=function n(e){function o(){return o.invoke.apply(o,arguments)}return this instanceof n?(e=void 0!==e?r(e).func().or(new Error("invoke must be a function")):function(){},o.invoke=e,o):new n(e)},e.Subscription=function o(){if(!(this instanceof o))return new o;var r={subscribers:[],payload:null,delivered:!1},n=new e.Invocable;return n.invoke=n.subscribe=function(e){if("function"!=typeof e)throw new Error("subscriber must be a function");return r.delivered?e.call(n,r.payload):r.subscribers.push(e),n},n.clear=function(){return r.subscribers=[],n},n.deliver=function(o){return r.payload=o,r.delivered=!0,e.loop(r.subscribers,function(e,o){o.call(n,r.payload)}),n.clear(),n},n.unsubscribe=function(o){var t=[];return e.loop(r.subscribers,function(r,e){e!==o&&t.push(e)}),r.subscribers=t,n},n},e});
+					</script>
+					
+					<script scone-resource="Scone/Event.js">
+						scone.declare("Scone/Event.js",["Scone/util.js"],function(t){"use strict";function r(n){function o(t,r){return t&&o.hook(t,r),o.the}return t.copy(r.prototype,o),function(t){t.affairs=[],t.that(n)}(o),o}function n(t,r){var n=this;n.func=t,n.runs=void 0===r?1/0:r,n.count=0}return r.prototype.that=function(t){return void 0===t?this.the:(this.the=t,this)},r.prototype.hook=function(t,r){if(!t)throw new Error("event hook method requires func");return this.affairs.push(new n(t,r)),this},r.prototype.once=function(t){return this.hook(t,1)},r.prototype.unhook=function(){for(var t=[],r=0;r<arguments.length;r+=1)for(var n=arguments[r],o=0;o<this.affairs.length;o+=1){var e=this.affairs[o];e!==n&&e.func!==n&&t.push(e)}return this.affairs=t,this},r.prototype.trigger=function(){for(var t=[],r=0;r<this.affairs.length;r+=1){var n=this.affairs[r];t.push(n.invoke(this.the,arguments)),n.runs<1&&this.unhook(n)}return t},n.prototype.invoke=function(t,r){var n=this;return n.runs-=1,n.count+=1,n.func.apply(t,r)},r.Affair=n,r});
+					</script>
+					<script scone-resource="Scone/pages.js">
+						scone.declare("Scone/pages.js",["Scone/util.js","Scone/Event.js","Scone/Typo.js"],function(e,t,n){"use strict";function i(e){this.label=e,this.pattern=null,this.title=null,this.desc=null,this.payload=null,this.onShow=new t(this),this.onHide=new t(this),this.onShow(function(){this.show()}),this.onHide(function(){this.hide()})}var o=!!window.history.pushState;i.prototype.show=function(){},i.prototype.hide=function(){};var r=new e.Invocable,c={collection:{},requestLink:null,baseLink:null,match:null};return r.active=function(){return c.match},r.invoke=function(e){return void 0===e?c.collection:c.collection.hasOwnProperty(e)?c.collection[e]:null},r.onNavigate=new t(r),r.assess=function(e){e=n(e).str().or(new Error("link must be a string"));for(var t in c.collection){var i=c.collection[t];if("!"!==i.label){var o=new RegExp("^"+i.pattern.replace(/\//g,"/")+"$"),r=o.exec(e);if(r)return{match:i,regexResults:r}}}return{match:c.collection["!"],regexResults:[e]}},r.react=function(t){t=void 0!==t?n(t).str().or(new Error("link must be a string, or undefined for default fallback")):window.location.pathname.replace(e.regex(/^/,c.baseLink),"");var i=c.match,o=r.assess(t);return c.match=o.match,n.set(i)&&i.onHide.trigger(c.match,o.regexResults,i),c.match.onShow.trigger(c.match,o.regexResults,i),document.title=c.match.title?c.match.title:"",r.onNavigate.trigger(c.match,o.regexResults,i),c.match},r.push=function(e){return e=n(e).str().or(new Error("link must be a string")),e=e.replace(/(^\/|^\.\/)/,""),o&&window.history.pushState({},"",e),r.react("/"+e)},r.initSubscription=new e.Subscription,r.unfreeze=function(){var t=document.querySelectorAll('script[type="frozen"]');return e.loop(t,function(t,n){var i=n.innerHTML.replace("<script-escaped","<script").replace("</script-escaped","</script"),o=document.createElement("div");o.innerHTML=i,e.loop(o.querySelectorAll("script"),function(e,t){console.log(t);var n=document.createElement("script");n.src=t.src,n.type=t.type,n.innerHTML=t.innerHTML,document.head.insertBefore(n,document.head.firstChild),document.head.removeChild(n)}),n.outerHTML=o.innerHTML}),r},r.initiated=!1,r.init=function(){r.initiated=!0,r.unfreeze();var t="sconePagesInfo"in window?window.sconePagesInfo:null;if(!t)throw new Error("sconePagesInfo was not found");return c.requestLink=t.requestLink,c.baseLink=t.baseLink,e.loop(t.collection,function(e,t){var n=new i(t.label);"pattern"in t&&(n.pattern=t.pattern),"title"in t&&(n.title=t.title),"desc"in t&&(n.desc=t.desc),n.payload=document.querySelector('[scone-page-payload="'+n.label+'"]'),c.collection[n.label]=n}),document.body.addEventListener("click",function(e){var t="A"===e.target.tagName.toUpperCase(),n=e.target.hasAttribute("scone-page"),i=e.target.hasAttribute("href");return t&&n&&i?(e.preventDefault(),r.push(e.target.getAttribute("href")),!1):void 0}),e.loop(c.collection,function(e,t){t.show=function(){return this.payload?(this.payload.style.display="block",this):this},t.hide=function(){return this.payload?(this.payload.style.display="none",this):this},t.hide()}),o&&window.addEventListener("popstate",function(){r.react()}),r.initSubscription.deliver(r),r},r});
+					</script>
+					<script> scone.load("Scone/pages.js", function (pages) { pages.init(); }); </script>
+					<hr class="stub">
+				</main>
+			</div>
+			<footer class="footer" tabindex="0">
+				<div class="ftable">
+					<div>
+						<h1>Contact Tony Moskal</h1>
+						<li>Email: <a data-fill-email="" href="mailto:digiheadz@mac.com">digiheadz@mac.com</a></li>
+						<!--<li>Phone: <a data-fill-phone>~error~</a></li>-->
+					</div>
+					<div>
+						<strong>© 2014 Tony Moskal</strong>
+						<li>Victoria, Beautiful British Columbia</li>
+						<!--<li><a class="webdev" href="http://chasemoskal.com/" target="_blank">Web development by Chase</a></li>-->
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script scone-resource="sconemods/Vimeo.js">
+			scone.declare("sconemods/Vimeo.js",function(){"use strict";function e(e){this.token=e}return e.endpoint="https://api.vimeo.com",e.prototype.call=function(t,n,o){o||(o=function(){});var s=new XMLHttpRequest;s.onload=function(){var e={};return e="string"==typeof this.response?JSON.parse(this.response):this.response,n(e)},s.onerror=o,s.ontimeout=o;try{s.open("GET",e.endpoint+t),s.responseType="json",s.setRequestHeader("Accept","application/vnd.vimeo.*+json;version=3.2"),s.setRequestHeader("Authorization","bearer "+this.token),s.send()}catch(r){o.call(s,"xhr-error")}return this},e});
+		</script>
+		<script scone-resource="sconemods/offset.js">
+			scone.declare("sconemods/offset.js",function(){"use strict";return function(e){var t=e.getBoundingClientRect(),n=(e&&e.ownerDocument).documentElement;return{top:t.top+window.pageYOffset-n.clientTop,left:t.left+window.pageXOffset-n.clientLeft}}});
+		</script>
+		<script scone-resource="script.js">
+			scone.load("Scone/util.js","Scone/Typo.js",function(e,t){"use strict";var n=/iphone|android|iemobile|opera mini|blackberry|webos|mobile|phone/i.test(navigator.userAgent),o=document.querySelector("main"),a=document.querySelector(".navbar"),i=new function(){var e=document.querySelector(".video-player"),n=(e.querySelector(".blankee"),e.querySelector(".videobox"));this.set=function(o){t(o).str().end(),this.clear(),e.setAttribute("class","video-player is-active");var a=document.createElement("iframe");a.src="//player.vimeo.com/video/"+o,a.width=890,a.height=500,a.setAttribute("frameborder","0"),a.setAttribute("webkitallowfullscreen",""),a.setAttribute("mozallowfullscreen",""),a.setAttribute("allowfullscreen",""),a.style.maxHeight=.9*window.innerHeight+"px";var i=window.innerHeight-a.height,r=i>0?i/2:10;return n.style.top=window.scrollY+r+"px",n.appendChild(a),this},this.clear=function(){return e.setAttribute("class","video-player"),n.innerHTML="",this},e.addEventListener("click",function(e){"iframe"!==e.target.tagName.toLowerCase()&&scone.load("Scone/pages.js",function(e){e.push("videos")})})},r=new e.Subscription;scone.load("sconemods/Vimeo.js",function(e){new e("4fe0b57497729fb3cd2cab275aff8c0d").call("/users/853353/albums/3134672/videos?sort=manual",function(e){r.deliver(e)},function(){console.log("ERROR",this,arguments)})}),scone.load("Scone/pages.js",function(t){t.init(),t.onNavigate(function(){e.loop(a.querySelectorAll("a[scone-page]"),function(e,t){t.className=""});var n=a.querySelector('[scone-page="'+t.active().label+'"]');return n?void(n.className="is-active"):!1}),r(function(o){var a=t("videos").payload.querySelector("[data-page]"),i=document.createElement("ol");i.className="video-list",e.loop(o.data,function(e,t){var o=document.createElement("li");o.style.backgroundImage="url("+t.pictures.sizes[4].link+")";var a=document.createElement("div"),r=document.createElement("h1");r.textContent=t.name,a.appendChild(r);var l=document.createElement("a");l.className="play-button";var c="Play on Vimeo";l.setAttribute("data-tip",c),l.textContent=c,l.href=t.link,l.target="tony-moskal-video",a.appendChild(l),l.addEventListener("click",function(e){if(!n){var o=t.uri.match(/^\/videos\/(\d+)$/i)[1];return scone.load("Scone/pages.js",function(e){e.push("videos/"+o)}),e.preventDefault(),!1}});var s=document.createElement("p");s.textContent=t.description,a.appendChild(s);var d=document.createElement("p");d.className="info";var u=Math.round(t.duration/60);u=0!=u?u:1,d.textContent=u+" min"+(u>1?"s":""),a.appendChild(d),o.appendChild(a),i.appendChild(o)});var r=a.querySelector(".intro");r&&r.parentNode.removeChild(r),a.appendChild(i)}),t("videos").onShow(function(e,t){t[1]?r(function(){var e=t[1];i.set(e)}):i.clear()}).onHide(function(){r.clear()}),t.react()}),scone.load("sconemods/offset.js",function(e){function t(){var t=e(o).top,n=window.pageYOffset-t;a.setAttribute("data-tagalong",n>0?"yes":"no"),a.style.width=o.offsetWidth+"px"}a.setAttribute("scroll-follow","yes"),window.addEventListener("scroll",t),window.addEventListener("resize",t),t()});var l="digi";l+="headz@mac",l+=".com",e.loop(document.querySelectorAll("a[data-fill-email]"),function(e,t){t.href="mailto:"+l,t.textContent=l});var c="5555";c+="5555555";var s="+5 (555) ";s+="555-5555",e.loop(document.querySelectorAll("a[data-fill-phone]"),function(e,t){t.href="tel:"+c,t.textContent=s})});
+		</script>
+	
+</body></html>
